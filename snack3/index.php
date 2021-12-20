@@ -44,6 +44,7 @@ $posts = [
 ];
 
 // var_dump($posts);
+
 foreach(array_keys($posts) as $paramName){
   
   for ($i=0; $i<count($posts[$paramName]); $i++){
@@ -55,8 +56,7 @@ foreach(array_keys($posts) as $paramName){
     foreach(array_keys($paramNameArray) as $keyArray){
       echo " <li> {$keyArray} => {$paramNameArray[$keyArray]} </li> ";
     }
-
-    
+ 
   }
   
 };
