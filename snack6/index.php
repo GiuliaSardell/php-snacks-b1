@@ -30,23 +30,23 @@ $db = [
 
 // var_dump ($db) ;
 
-foreach(array_keys($db) as $title){
-  // var_dump ($db[$title]) ;
-  var_dump($title);
-  for ($i=0; $i<count($db[$title]); $i++){
-    // var_dump($db[$title][$i]);
+// foreach(array_keys($db) as $title){
+//   // var_dump ($db[$title]) ;
+//   var_dump($title);
+//   for ($i=0; $i<count($db[$title]); $i++){
+//     // var_dump($db[$title][$i]);
 
     
     
-    foreach(array_keys($db[$title][$i]) as $element){
+//     foreach(array_keys($db[$title][$i]) as $element){
 
 
-      var_dump($db[$title][$i][$element]);
+//       var_dump($db[$title][$i][$element]);
 
-    }
+//     }
 
-  };
-};
+//   };
+// };
 
 
 
@@ -68,17 +68,42 @@ foreach(array_keys($db) as $title){
   <div class="grey" style="border: 3px solid grey;">
   <p> <?php 
   foreach(array_keys($db) as $title){ 
-    echo "<br> $title : <br> <br>";
-    for ($i=0; $i<count($db[$title]); $i++){
-      foreach(array_keys($db[$title][$i]) as $element){
-        echo " {($db[$title][$i][$element])}" ;
+    if($title == 'teachers'){
+
+      echo "$title: <br>";
+      
+      for ($i=0; $i<count($db[$title]); $i++){
+        echo "<br>";
+        foreach(array_keys($db[$title][$i]) as $element){
+          $name = $db[$title][$i][$element];
+
+          echo " $name " ;
+          
+        };
       };
-    };
+    }
   }; ?> </p>
 
   </div>
 
   <div class="green" style="border: 3px solid green;">
+  <p> <?php 
+  foreach(array_keys($db) as $title){ 
+    if($title == 'pm'){
+
+      echo "$title: <br>";
+      
+      for ($i=0; $i<count($db[$title]); $i++){
+        echo "<br>";
+        foreach(array_keys($db[$title][$i]) as $element){
+          $name = $db[$title][$i][$element];
+
+          echo " $name ";
+          
+        };
+      };
+    }
+  }; ?> </p>
 
 
   </div>
